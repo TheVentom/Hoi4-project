@@ -1,0 +1,20 @@
+state={
+	id=750
+	name="STATE_750"
+	manpower = 103120
+	
+	state_category = pastoral
+
+	history={
+		owner = BED
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BED
+		add_core_of = SAU
+	}
+
+	provinces={
+		2057 4968 4974 5027 5058 8101 10815 10901 12749
+	}
+}

@@ -1,0 +1,293 @@
+focus_tree = {
+	id = tws_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			original_tag = TWS
+		}
+	}
+	default = no
+	focus = {
+		id = tws_tech
+		x = 1
+		y= 0
+		cost = 5
+		completion_reward = {
+			add_tech_bonus = {
+				name = construction_tech_bonus
+				bonus = 0.5
+				uses = 2
+				category = construction_tech
+			}			
+		}
+	}
+	focus = {
+		id = naples_buildup
+		x = 1
+		y = 1
+		prerequisite = { focus = tws_tech }
+		cost = 10
+		completion_reward = {
+			117 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = sicily_industry
+		x=1
+		y=2
+		prerequisite = { focus = naples_buildup }
+		cost = 10
+		completion_reward = {
+			115 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = tws_colony
+		x = 1
+		y = 3
+		prerequisite = { focus = sicily_industry }
+		cost = 10
+		completion_reward = {
+			458 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			665 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+					}
+				}
+			}
+		}
+	focus = {
+		id = Reuniting_Italy
+		x =5
+		y= 0
+		cost = 5
+		completion_reward = {
+			add_ideas = militarism_focus
+			army_experience = 20
+			}
+		}
+	focus = {
+		id = tws_abruzzo
+		x = 4
+		y = 1
+		prerequisite = { focus = Reuniting_Italy }
+		cost = 10
+		available = { date < 1912.1.1 }
+		completion_reward = {
+			if = {
+			limit = {
+					157 = {
+						controller = {
+							tag = POP
+						}
+					}
+				}
+				POP = {
+					country_event = { id = tws.4 }
+					}
+				}
+			}
+		}
+	focus = {
+		id = tws_reintegration
+		x = 6
+		y = 1
+		cost = 10
+		bypass = {
+			157 = { is_owned_by = TWS }
+			2 = { is_owned_by = TWS }
+		}
+		prerequisite = { focus = Reuniting_Italy }
+		mutually_exclusive = { focus = Abruzzo }
+		cost = 10
+		ai_will_do = {
+			factor = 10	
+		}
+		completion_reward = {
+			POP = {
+				country_event = { id = tws.2 }
+			}
+		}
+	}
+	focus = {
+		id = tws_forts
+		x = 5
+		y = 2
+		cost = 10
+		prerequisite = { 
+			focus = tws_reintegration 
+			focus = tws_abruzzo 
+			}
+		available = {
+				controls_state = 157
+				controls_state = 2
+				}
+		completion_reward = {
+			157 = {
+				add_building_construction = {
+					type = bunker 
+					level = 4
+					province = 967
+					instant_build = yes
+					}
+				add_building_construction = {
+					type = bunker 
+					level = 4
+					province = 11861
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 4
+					province = 6926
+					instant_build = yes
+					}
+				}
+			2 = {
+				add_building_construction = {
+					type = bunker 
+					level = 4
+					province = 9794
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker 
+					level = 4
+					province = 6862
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = tws_blackshirt
+		x = 5
+		y = 3
+		cost = 10
+		prerequisite = { focus = tws_forts }
+		available = {
+				controls_state = 157
+				controls_state = 2
+				}
+		completion_reward = {
+			load_oob = TWS_black
+			}
+		}
+	focus = {
+		id = tws_completeunity
+		x = 5
+		y = 4
+		cost = 10
+		bypass = {
+			162 = { is_owned_by = TWS }
+			158 = { is_owned_by = TWS }
+			161 = { is_owned_by = TWS }
+			159 = { is_owned_by = TWS }
+			160 = { is_owned_by = TWS }
+		}
+		prerequisite = { focus = tws_blackshirt }
+		completion_reward = {
+			add_threat = 3
+			declare_war_on = {
+					type = annex_everything
+					target = ITA
+					}
+
+			}
+		}
+	focus = {
+		id = tws_unity
+		x = 5
+		y = 5
+		cost = 5
+		prerequisite = { focus = tws_completeunity}
+		
+		available = {
+			controls_state = 162
+			controls_state = 161
+			controls_state = 160
+			controls_state = 159
+			controls_state = 158
+		}
+		completion_reward = {
+			162 = {
+				add_core_of = TWS
+				}
+			161 = {
+				add_core_of = TWS
+			}
+			160 = {
+				add_core_of = TWS
+			}
+			159 = {
+				add_core_of = TWS
+			}
+			158 = {
+				add_core_of = TWS
+			}
+		}
+	}
+	focus = {
+		id = tws_demand_istria
+		x= 8
+		y = 6
+		cost = 10
+		prerequisite = { focus = tws_unity }
+		completion_reward = {
+			AUS = {
+				country_event = { id = tws.9 }
+				}
+			}
+		}
+	focus = {
+		id = tws_demand_tirol
+		x= 10
+		y= 6
+		cost = 10
+		prerequisite = { focus= tws_unity}
+		completion_reward = {
+			AUS = {
+				country_event = { id = tws.7 }
+				}
+			add_threat = 5
+			}
+	}
+	focus = {
+		id = tws_albania
+		x = 6
+		y = 6
+		cost = 10 
+		available = {
+			country_exists = ALB
+		}
+		prerequisite = { focus = tws_unity }
+		completion_reward = {
+			give_guarantee = ALB
+			puppet = ALB
+			}
+		}
+}
+	

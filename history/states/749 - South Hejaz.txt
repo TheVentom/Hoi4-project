@@ -1,0 +1,19 @@
+state={
+	id=749
+	name="STATE_749"
+	manpower = 15110
+	
+	state_category = pastoral
+
+	history={
+		owner = SAU
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SAU
+	}
+
+	provinces={
+		1923 5006 8073 10786
+	}
+}

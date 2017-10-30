@@ -1,0 +1,114 @@
+﻿### Copied from Yugoslavia ###
+division_template = {
+	name = "Pjesadijska Divizija"		# Infantry Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Crna Legija"		# Crna Division
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Alpski Odred"			# Mountain Brigade	
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Konjanici" 			# Cavalry Division
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Tenkovska Divizija" 			# Tank Battalion
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+		}
+}
+###### OOB ######
+units = {
+	division = {			
+		name = "Pjesadijska Divizija"
+		location = 6626
+		division_template = "Pjesadijska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}
+}
+units = {
+	division = {			
+		name = "Pjesadijska Divizija"
+		location = 3617
+		division_template = "Pjesadijska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}	
+}
+units = {
+	division = {			
+		name = "Crna Legija"
+		location = 9611
+		division_template = "Crna Legija"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+
+	}	
+}
+units = {
+	division = {			
+		name = "Tenkovska Divizija"
+		location = 9611
+		division_template = "Tenkovska Divizija"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}	
+}
+

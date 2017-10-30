@@ -1,0 +1,23 @@
+state={
+	id=747
+	name="STATE_747"
+	manpower = 1058292
+	
+	state_category = rural
+	
+	resources={
+		oil=26
+	}
+
+	history={
+		owner = AZR
+		buildings = {
+			infrastructure = 4
+		}
+		add_core_of = AZR
+	}
+
+	provinces={
+		1450 3668 3711 4463 6689 7554 7624 9645 
+	}
+}

@@ -1,0 +1,23 @@
+state={
+	id=746
+	name="STATE_746"
+	manpower = 312021
+	
+	state_category = city
+
+	history={
+		owner = TWS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			6831 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = TWS
+	}
+
+	provinces={
+		963 3923 3966 6831
+	}
+}

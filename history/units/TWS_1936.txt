@@ -1,0 +1,155 @@
+division_template = {
+	name = "Divisione di Fanteria"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Divisione Celere" 		# Divisione Celere (Fast Division)
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		motorized = { x = 2 y = 0 }		# (elite) Bersaglieri Regiment
+		motorized = { x = 2 y = 1 }
+		light_armor = { x = 3 y = 0 }	# L3/35 Tankette Battaltion
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+	}
+}
+division_template = {
+	name = "Divisione Coloniale"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+division_template = {
+	name = "Militia"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Blackshirt"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		motorized = { x = 2 y = 0 }
+		motorized = { x = 2 y = 1 }
+		light_armor = { x = 3 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1}
+	}
+}
+#OOB#
+units = {
+	division= {	
+		name = "I. Division Coloniale"
+		location = 11969
+		division_template = "Divisione Coloniale"	
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "I. Divisione Regiment"
+		location = 6843
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "II. Divisione Regiment"
+		location = 4014
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "IV. Divisione Regiment"
+		location = 3901
+		division_template = "Divisione di Fanteria"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "II. Division Coloniale"
+		location = 9994
+		division_template = "Divisione Coloniale"	
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "I. Division Celere"
+		location = 10074
+		division_template = "Divisione Celere"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "II. Division Celere"
+		location = 11837
+		division_template = "Divisione Celere"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "III. Divisione Celere"
+		location = 819
+		division_template = "Divisione Celere"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "I. Militia"
+		location = 11773
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "III. Militia"
+		location = 6831
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "III. Militia"
+		location = 4159
+		division_template = "Militia"
+		start_equipment_factor = 0.3
+		start_experience_factor = 0.3
+	}
+	navy = {				
+		name = "Italia Marine"			
+		base = 819
+		location = 819
+		ship = { name = "Taranto" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = TWS } } }
+		ship = { name = "Sicily" definition = light_cruiser equipment = { light_cruiser_1 = { amount = 1 owner = TWS } } }
+	}
+}

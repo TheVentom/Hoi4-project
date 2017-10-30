@@ -1,0 +1,18 @@
+ideas = {
+	country = {
+		petar_karadordevic = {
+			allowed = {
+				original_tag = "SER"
+			}
+
+			
+			removal_cost = -1
+			
+			modifier = {
+				ai_focus_aggressive_factor = 0.5
+				unity_factor = 0.05	
+
+			}
+		}
+	}
+}

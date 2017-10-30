@@ -1,0 +1,58 @@
+focus_tree = {
+
+	id = polish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			original_tag = POL
+		}
+	}
+	reset_on_civilwar = no
+
+	focus = {
+		id = POL_danzig
+		icon = GFX_goal_anschluss
+		cost = 3
+		available = {
+			is_puppet = no
+		}
+		cancel = {
+			OR = {
+				is_puppet = yes
+			}
+		}
+		cancel_if_invalid = no
+		x = 1
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {
+			UBC = {
+				OR = {
+					is_puppet = yes
+					exists = no 
+					}
+				}
+			}
+
+		completion_reward = {
+			army_experience = 10
+			transfer_state = 745
+			transfer_state = 188
+			745 = {
+				add_core_of = POL
+			}
+			188 = {
+				add_core_of = POL
+			}
+			add_threat = 2.00
+			}
+			
+		}
+	}

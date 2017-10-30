@@ -1,0 +1,20 @@
+state = {
+	id = 751
+	name = "STATE_751" #EastSerbia
+	manpower = 834102
+	state_category = town
+	
+	history = {
+		owner = SER
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+		}
+		add_core_of = SER
+	}
+	
+	provinces = {
+	606 6619 6799 9588 9591 11572 11574 11741
+	}
+}
+	

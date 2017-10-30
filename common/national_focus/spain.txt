@@ -1,0 +1,747 @@
+focus_tree = {
+	id = spr_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			original_tag = SPR
+		}
+	}
+focus = {
+	id = spr_ind
+	x= 3
+	y= 0
+	cost = 10
+	
+	completion_reward = {
+		add_tech_bonus = {
+			name=industrial_bonus
+			bonus = 0.5
+			uses = 2
+			category = industry 
+			}
+		}
+	}
+focus = {
+	id = con_effort
+	prerequisite = { focus = spr_ind }
+	x = 1
+	y = 1
+	cost = 10
+	complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+	id = con1_effort
+	prerequisite = { focus = con_effort }
+	x = 1
+	y = 2
+	cost = 10
+	complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+	id = con2_effort
+	prerequisite = { focus = con1_effort }
+	x = 1
+	y = 3
+	cost = 10
+	
+	complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+	id = con3_effort
+	prerequisite = { focus = con2_effort }
+	x = 1
+	y = 4
+	cost = 10
+	complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr_army
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = spr_ind }
+		x = 3
+		y = 1
+		cost = 10
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr1_army
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = spr_army }
+		x = 3
+		y = 2
+		cost = 10
+
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr2_army
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = spr1_army }
+		x = 3
+		y = 3
+		cost = 10
+
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr3_army
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = spr2_army }
+		x = 3
+		y = 4
+		cost = 10
+
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = spr3_army
+				focus = con3_effort 
+				focus = spr_oil 
+			}
+		x = 3
+		y = 5
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = spr_re
+		x = 15
+		y= 0
+		cost = 10
+		
+		completion_reward = {
+			SPR = {
+					country_event = { id = spain.1 }
+					}
+				}
+		}
+	focus = {
+		id = spr_ara
+		x = 15
+		y = 1
+		cost = 10
+		prerequisite = { focus = spr_re }
+		
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ARA
+			}
+		}
+	}
+	focus = {
+		id = spr_un
+		x = 15
+		y = 2
+		cost = 10
+		prerequisite = { focus = spr_ara }
+		completion_reward = {
+			add_national_unity = 0.15
+			add_manpower = -10000
+		}
+	}
+	focus = {
+		id = spr_camp
+		x = 15
+		y = 3
+		cost = 10
+		prerequisite = { focus = spr_un }
+		completion_reward = {
+			manpower = -10000
+			168 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			}
+	
+	}
+	focus = {
+		id = spr_africa
+		x = 13
+		y = 4
+		cost = 10
+		prerequisite = { focus= spr_camp }
+		completion_reward = {
+			MGH = {
+				country_event = { id = spain.2 }
+				}
+			}
+		}
+	focus = {
+		id = spr_navarre
+		x = 13
+		y = 5
+		cost = 10
+		available = {
+			controls_state = 461
+			controls_state = 462
+			controls_state = 459
+			controls_state = 513
+		}
+		prerequisite = { focus = spr_africa }
+		completion_reward = {
+			FRA = {
+				country_event = { id=spain.3 }
+			}
+		}
+	}
+	focus = {
+		id = spr_portugal
+		x = 15
+		y = 4
+		cost = 10
+		prerequisite = { focus = spr_camp }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+				}
+		}
+	}
+	focus = {
+		id = spr_por1
+		x = 15
+		y = 5
+		cost = 10
+		prerequisite = { focus = spr_portugal }
+		available = {
+				controls_state = 112
+				controls_state = 179
+				controls_state = 112
+				controls_state = 180
+				controls_state = 181
+				}
+		completion_reward = {
+			112 = {
+				add_core_of = SPR
+			}
+			179 = {
+				add_core_of = SPR
+				}
+			112 = {
+				add_core_of = SPR
+			}
+			180 = {
+				add_core_of = SPR
+			}
+			181 = {
+				add_core_of = SPR
+			}
+			}
+		}
+	focus = {
+		id = spr_ven
+		x= 17
+		y= 4
+		cost = 10
+		prerequisite = { focus = spr_camp }
+		completion_reward = {
+			VEN = {
+				country_event = { id=spain.4 }
+			}
+		}
+	}
+	focus = {
+		id = spr_ven1
+		x = 17
+		y = 5
+		cost = 10
+		available = {
+			SPR = {	
+				owns_state = 489
+			}
+		}
+		prerequisite = { focus = spr_ven }
+		completion_reward = {
+			SPR = {
+				country_event = { id = spain.5 }
+			}
+		}
+	}
+	focus = {
+		id = spr1_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = spr_slot 
+			}
+		x = 3
+		y = 6
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = spr_pay
+		x = 5
+		y = 1
+		cost = 10
+		prerequisite = { focus = spr_ind }
+		
+		
+		completion_reward = {
+			add_ideas = SPR_payed
+			ARA = {
+				remove_ideas = SPR_payed }
+			}
+		}
+	focus = {
+		id = spr_tung
+		x = 5
+		y = 2
+		cost = 10
+		prerequisite = { focus = spr_pay }
+		
+		completion_reward = {
+			41 = {
+			add_resource = {
+				type = tungsten
+				amount = 30 
+				}
+			}
+		}
+	}
+	focus = {
+		id = spr_chrom
+		x = 5
+		y = 3
+		cost = 10
+		prerequisite = { focus = spr_tung}
+		
+		completion_reward = {
+			317 = {
+				add_resource = {
+					type = chromium
+					amount = 45
+					}
+				}
+			}
+		}
+	focus = {
+		id = spr_oil
+		x= 5
+		y = 4
+		cost = 10
+		prerequisite = { focus = spr_chrom }
+		
+		completion_reward = {
+			493 = {
+				add_resource = {
+					type = oil
+					amount = 40 
+					}
+				}
+			}
+		}
+	focus = {
+		id = spr_gov
+		x = 8
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			add_ideas = internationalism
+			}
+			add_political_power =150
+		}
+	focus = {
+		id = spr_poli
+		x = 8
+		y = 1
+		cost = 10
+		prerequisite = { focus = spr_gov }
+		
+		completion_reward = {
+			add_ideas = idea_political_correctness
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = spr_indo
+		x = 8
+		y = 2
+		cost = 10
+		prerequisite = { focus = spr_poli }
+		
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = spr_comm
+		x = 8
+		y = 3
+		cost = 10
+		prerequisite = { focus = spr_indo }
+		completion_reward = {
+			add_ideas = political_commissars_focus
+			add_political_power = 200
+		}
+	}
+	focus = {
+		id = spr_youth
+		icon = GFX_goal_generic_more_territorial_claims
+		x =  8
+		y = 4
+		cost = 10
+		prerequisite = { focus = spr_comm }
+		completion_reward = {
+			add_ideas = military_youth_focus
+			}
+		}
+	focus = {
+		id = spr_fant
+		x = 8
+		y = 5
+		cost = 10
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = spr_youth }
+		completion_reward = {
+			add_ideas = ideological_fanaticism_focus
+		}
+	}
+
+		
+		
+
+	

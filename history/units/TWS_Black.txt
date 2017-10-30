@@ -1,0 +1,22 @@
+units = {
+	division = {
+		name = "I. Blackshirt"
+		location = 925
+		division_template = "Blackshirt"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "II. Blackshirt"
+		location = 9904
+		division_template = "Blackshirt"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "III. Blackshirt"
+		location = 11751
+		division_template = "Blackshirt"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}

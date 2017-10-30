@@ -1,0 +1,245 @@
+add_namespace = tws
+
+country_event = {
+	id = tws.1
+	title = tws.1.t
+	desc = tws.1.d
+	picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.1.a
+		2 = {
+			if = {
+				limit = { is_owned_by = POP }
+				add_core_of = TWS
+			}
+		}
+		157 = {
+			if = {
+				limit = { is_owned_by = POP }
+				add_core_of = TWS
+			}
+		}
+
+		annex_country = { target = POP transfer_troops = yes }
+		add_political_power = 75
+		add_named_threat = { threat = 5 name = tws.1.t }
+	}
+}
+# Pope asked about reintegration
+country_event = {
+	id = tws.2
+	title = tws.2.t
+	desc = tws.2.t
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = { # Accept
+		name = tws.2.t
+		ai_chance = {
+			base = 100
+			#modifier = {
+			#	add = -25
+			#	TWS = { has_army_size = { size < 8 } }
+			#}
+			#modifier = {
+			#	add = 100
+			#	TWS = { has_army_size = { size > 7 } }
+			#}
+			#modifier = {
+			#	add = 20
+			#	is_in_faction_with = TWS
+			#}
+		}
+		TWS = {
+			country_event = { hours = 2 id = tws.1 }
+		}
+		custom_effect_tooltip = GAME_OVER_TT
+	}
+	option = { # Refuse
+		name = tws.2.b
+		ai_chance = {
+			base = 0			
+		}
+		TWS = {
+			country_event = { hours = 2 id = tws.3 }
+			if = { limit = { is_in_faction_with = POP }
+				remove_from_faction = POP
+			}
+		}
+	}
+}
+
+country_event = {
+	id = tws.3
+	title = tws.3.t
+	desc = tws.3.d
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.3.a
+		add_state_claim = 2
+		add_state_claim = 157
+		create_wargoal = {
+			type = take_state_focus
+			target = POP
+			generator = { 2 157 }
+		}
+	}
+}
+
+country_event = {
+	id = tws.4
+	title = tws.4.t
+	desc = tws.4.desc
+	
+	is_triggered_only = yes
+	option = {
+		name = tws.4.a
+		ai_chance = {
+			factor = 80
+		}
+		TWS = { country_event = { id = tws.6 days = 1 } }
+		effect_tooltip = {
+			TWS = {
+				transfer_state = 157
+				add_core_of = 157
+			}
+		}
+	}
+	option = {
+		name = tws.4.b
+		ai_chance = {
+			factor = 10
+			}
+			TWS = {
+				declare_war_on = {
+					target = POP
+					type = take_state
+					generator = { 157 }
+				}
+			}
+		}
+		
+}	
+country_event = {
+	id = tws.6
+	title = tws.6.t
+	desc = tws.6.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.6.a
+		transfer_state = 157
+		add_core_of = 157
+	}
+}
+# Tirol
+country_event = {
+	id = tws.7
+	title = tws.7.t
+	desc = tws.7.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.7.a
+		ai_chance = {
+			factor = 50
+		}
+		TWS = { country_event = { id = tws.8 days = 1 } }
+		effect_tooltip = {
+			TWS = {
+				transfer_state = 39
+				add_core_of = 39
+			}
+		}
+	}
+	option = {
+		name = tws.7.b
+		ai_chance = {
+			factor = 50
+			}
+			TWS = {
+				declare_war_on = {
+					target = AUS
+					type = take_state
+					generator = { 39 }
+				}
+			}
+		}
+		
+	}
+country_event = {
+	id = tws.8
+	title = tws.8.t
+	desc = tws.8.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.7.a
+		transfer_state = 39
+		add_core_of = 39
+	}
+}
+#Istria
+country_event = {
+	id = tws.9
+	title = tws.9.t
+	desc = tws.9.d
+	picture = GFX_report_event_hitler_parade
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.9.a
+		ai_chance = {
+			factor = 10
+		}
+		AUS = { country_event = { id = tws.10 days = 1 } }
+		effect_tooltip = {
+			TWS = {
+				transfer_state = 736
+				add_core_of = 736
+			}
+		}
+	}
+	option = {
+		name = tws.9.b
+		ai_chance = {
+			factor = 90
+			}
+			TWS = {
+				declare_war_on = {
+					target = AUS
+					type = take_state
+					generator = { 736 }
+				}
+			}
+		}
+		
+	}
+country_event = {
+	id = tws.10
+	title = tws.10.t
+	desc = tws.10.d
+	picture = GFX_report_event_german_polish_border
+
+	is_triggered_only = yes
+	
+	option = {
+		name = tws.10.a
+		transfer_state = 736
+		add_core_of = 736
+	}
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=744
+	name="STATE_744" # Ragussa
+	manpower = 731202
+	
+	state_category = large_town
+	
+	resources={
+		chromium=18
+		aluminium=66
+		oil=16
+	}
+
+	history={
+		owner = RAG
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			dockyard = 2
+			industrial_complex = 2
+			6889 = {
+				naval_base = 8
+			}
+		}
+		victory_points = {
+			6889 3 
+		}
+		add_core_of = CRO
+		add_core_of = RAG
+	}
+	provinces={
+	3868 6889 9809 9821 11858
+	}
+}

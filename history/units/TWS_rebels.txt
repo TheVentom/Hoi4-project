@@ -1,0 +1,15 @@
+units = {
+	division= {	
+		name = "I. Venice Rebels"
+		location = 11584
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	
+		name = "II. Venice Rebels"
+		location = 628
+		division_template = "Divisione di Fanteria"	
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+	}
