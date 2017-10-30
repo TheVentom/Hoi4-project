@@ -65,7 +65,6 @@ set_politics = {
 
 create_faction = Soyuz
 add_to_faction = SOV
-add_to_faction = AUS
 
 
 create_country_leader = {

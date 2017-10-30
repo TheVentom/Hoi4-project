@@ -131,16 +131,7 @@ units = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 
-	}			
-
-	division = {			
-		name = "1a División de Caballería"		
-		location = 9764  # Barcelona
-		division_template = "División de Caballería"
-		start_experience_factor = 0.2
-		start_equipment_factor = 0.8
-
-	}			
+	}					
 
 	division = {			
 		name = "1a Brigada Montaña"		
@@ -176,17 +167,7 @@ units = {
 
 	}			
 
-
-	### Island Garrisons ###
-	division = {			
-		name = "Comandancia de Baleares"		
-		location = 9793  #Mallorca
-		division_template = "Brigada de Infantería"		# garrison division, lower equipment, experience
-		force_equipment_variants = { infantry_equipment_0 = { owner = "SPR" } }
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.5
-
-	}			
+		
 	division = {			
 		name = "Comandancia de Canarias"		
 		location = 3891  # Canary Islands

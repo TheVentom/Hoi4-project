@@ -37,11 +37,14 @@ set_technology = {
 	fleet_in_being = 1
 }
 
+
+create_faction = "Slavic Bloc"
+add_to_faction = UKR
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 15
+			popularity = 65
 		}
 
 		neutrality = {
@@ -49,7 +52,7 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 60
+			popularity = 10
 		}
 
 		fascism = { 
