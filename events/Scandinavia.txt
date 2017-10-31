@@ -1,0 +1,320 @@
+add_namespace = kau
+
+country_event = {
+	id = kau.1
+	title = kau.1.t
+	desc = kau.1.d
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KAU
+		has_defensive_war = no
+		date > 1936.2.16
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = { # Let'em go
+		name = kau.1.a
+		ai_chance = {
+			factor = 50
+		}
+			NOR = {
+				transfer_state = 110
+				transfer_state = 142
+				transfer_state = 143
+				transfer_state = 144
+				transfer_state = 337
+				}
+			
+			NOR = {
+				load_oob = "NOR_1936"
+				set_national_unity = 0.8
+			}
+			
+			NOR = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+			}
+
+		}
+	}
+	option = {
+		name = kau.2.b
+		ai_chance = {
+			factor = 50
+		}
+			NOR = {
+				transfer_state = 110
+				transfer_state = 142
+				transfer_state = 143
+				transfer_state = 144
+				transfer_state = 337
+				}
+			
+			NOR = {
+				load_oob = "NOR_1936"
+				set_national_unity = 0.8
+			}
+			
+			NOR = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 1
+				}
+			}
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = NOR
+	}
+}
+country_event = {
+	id = kau.2
+	title = kau.2.t
+	desc = kau.2.d
+	fire_only_once = yes
+	trigger = {
+		tag = KAU
+		has_defensive_war = no
+		date > 1936.2.16
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = { # Let'em go
+		name = kau.2.a
+		DEN = {
+			country_event = { id = kau.5 }
+		}
+		ai_chance = {
+			factor = 50
+		}
+			DEN = {
+				transfer_state = 99
+				transfer_state = 37
+				transfer_state = 58
+				}
+			
+			DEN = {
+				load_oob = "DEN_1936"
+				set_national_unity = 0.8
+			}
+			
+			DEN = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+				}
+			}
+	}
+	option = {
+		name = kau.2.b
+		ai_chance = {
+			factor = 50
+		}
+		DEN = {
+			country_event = { id = kau.5 }
+		}
+			DEN = {
+				transfer_state = 99
+				transfer_state = 37
+				transfer_state = 58
+				}
+			
+			DEN = {
+				load_oob = "DEN_1936"
+				set_national_unity = 0.8
+			}
+			
+			DEN = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 1
+			}}
+
+
+		create_wargoal = {
+			type = annex_everything
+			target = DEN
+		}
+}
+}
+country_event = {
+	id = kau.3
+	title = kau.3.t
+	desc = kau.3.d
+	fire_only_once = yes
+	trigger = {
+		tag = KAU
+		has_defensive_war = no
+		date > 1936.2.16
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = { # Let'em go
+		name = kau.3.a
+		ai_chance = {
+			factor = 50
+		}
+			ICE = {
+				transfer_state = 100
+				}
+			
+			ICE = {
+				load_oob = "ICE_1936"
+				set_national_unity = 0.8
+			}
+			
+			ICE = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+				}
+			}
+	}
+	option = {
+		name = kau.3.b
+		ai_chance = {
+			factor = 50
+		}
+			ICE = {
+				transfer_state = 100
+
+				}
+			
+			ICE = {
+				load_oob = "ICE_1936"
+				set_national_unity = 0.8
+			}
+			
+			ICE = {
+				add_popularity = {
+					ideology = democratic
+					popularity = 1
+			}}
+
+
+		create_wargoal = {
+			type = annex_everything
+			target = ICE
+		}
+}
+}
+country_event = {
+	id = kau.4
+	title = kau.4.t
+	desc = kau.4.d
+	fire_only_once = yes
+	trigger = {
+		tag = KAU
+		has_defensive_war = no
+		date > 1936.2.16
+	}
+	mean_time_to_happen = {
+		days = 7
+	}
+	option = { # Let'em go
+		name = kau.4.a
+		ai_chance = {
+			factor = 50
+		}
+		FIN = {
+				transfer_state = 111
+				transfer_state = 149
+				transfer_state = 148
+				transfer_state = 722
+				transfer_state = 150
+				transfer_state = 146
+				transfer_state = 215
+				transfer_state = 213
+				}
+			FIN = {
+				add_ideas = sisu
+				}
+			KAU = {
+				remove_ideas = sisu
+				}
+			FIN = {
+				load_oob = "FIN_1936"
+				set_national_unity = 0.8
+			}
+			
+			FIN = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+				}
+			}
+	}
+	option = {
+		name = kau.4.b
+		ai_chance = {
+			factor = 50
+		}
+			FIN = {
+				transfer_state = 111
+				transfer_state = 149
+				transfer_state = 148
+				transfer_state = 722
+				transfer_state = 150
+				transfer_state = 146
+				transfer_state = 215
+				transfer_state = 213
+				}
+			FIN = {
+				add_ideas = sisu
+				}
+			KAU = {
+				remove_ideas = sisu
+				}
+			FIN = {
+				load_oob = "FIN_1936"
+				set_national_unity = 0.8
+			}
+			
+			FIN = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 1
+				}
+			}
+
+
+		create_wargoal = {
+			type = annex_everything
+			target = FIN
+		}
+}
+}
+country_event = {
+	id = kau.5
+	title = kau.5.t
+	desc = kau.5.d
+	fire_only_once = yes
+	option = {
+		name = kau.5.a
+		ai_chance = {
+			factor = 50
+		}
+		GER = {
+			transfer_state = 58
+			}
+		}
+	option = {
+		name = kau.5.b
+		ai_chance = {
+			factor = 50
+			}
+		GER = {
+			declare_war_on = {
+				target = DEN
+				type = take_state
+				generator = { 58 }
+				}
+			}
+		}
+	}
