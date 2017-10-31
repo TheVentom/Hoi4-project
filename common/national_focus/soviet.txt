@@ -12,7 +12,7 @@ focus_tree = {
 	focus = {
 		id = SOV_crimea
 		icon = GFX_goal_generic_military_sphere
-		x = 12
+		x = 11
 		y = 0
 		cost = 10
 		bypass = {
@@ -32,3 +32,117 @@ focus_tree = {
 			add_named_threat = { threat = 5 name = SOV_crimea }
 		}		
 	}
+	focus = {
+		id = SOV_west_slavs
+		x = 8
+		y = 1
+		cost = 10
+		prerequisite = { focus = SOV_crimea }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UKR
+				
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = BLR
+			}
+		}
+	}
+	focus = {
+		id = SOV_georgia
+		x = 10
+		y = 1
+		cost = 10
+		prerequisite = { focus = SOV_crimea }
+		completion_reward = {
+			GEO = {
+				country_event = sov.1
+				}
+			}
+		}
+	focus = {
+		id = SOV_azer
+		x = 12
+		y = 1
+		cost = 10
+		prerequisite = { focus = SOV_crimea }
+		completion_reward = {
+			AZR = {
+				country_event = sov.2
+				}
+			}
+		}
+	focus = {
+		id = SOV_turke
+		x = 14
+		y = 1
+		cost = 10
+		prerequisite = { focus = SOV_crimea }
+		completion_reward = {
+			TKS = {
+				country_event = sov.3
+					}
+				}
+			}
+	focus = {
+		id = SOV_AUS
+		x = 1
+		y = 0
+		cost = 5
+		icon = GFX_goal_generic_improve_relations
+		completion_reward = {
+			AUS = {
+				country_event = sov.6
+				}
+			}
+		}
+	focus = {
+		id = SOV_chrom
+		x = 10
+		y = 2
+		cost = 10
+		prerequisite = {focus = SOV_georgia}
+		completion_reward = {
+			233 = {
+				add_resource = {
+					type = chromium
+					amount = 46
+					}
+				}
+			}
+		}
+	focus = {
+		id = SOV_oil
+		x = 12
+		y = 2
+		cost = 10
+		prerequisite = { focus = SOV_azer }
+		completion_reward = {
+			747 = {
+				add_resource = {
+					type = oil
+					amount = 70
+					}
+				}
+			232 = {
+				add_resource = {
+					type = oil
+					amount = 33
+					}
+				}
+			}
+		}
+	focus = {
+		id = SOV_ala
+		x = 15
+		y = 2
+		cost = 10
+		prerequisite = { focus = SOV_turke }
+		completion_reward = {
+			ALA = { country_event = sov.7 }
+		}
+		}
+		}

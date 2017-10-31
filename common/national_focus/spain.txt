@@ -442,6 +442,9 @@ focus = {
 		x = 15
 		y= 0
 		cost = 10
+		ai_will_do = {
+			factor = 20
+		}	
 		
 		completion_reward = {
 			SPR = {
@@ -454,6 +457,9 @@ focus = {
 		x = 15
 		y = 1
 		cost = 10
+		ai_will_do = {
+			factor = 20
+		}	
 		prerequisite = { focus = spr_re }
 		
 		completion_reward = {
@@ -468,6 +474,9 @@ focus = {
 		x = 15
 		y = 2
 		cost = 10
+		ai_will_do = {
+			factor = 20
+		}	
 		prerequisite = { focus = spr_ara }
 		completion_reward = {
 			add_national_unity = 0.15
@@ -479,6 +488,9 @@ focus = {
 		x = 15
 		y = 3
 		cost = 10
+		ai_will_do = {
+			factor = 20
+		}	
 		prerequisite = { focus = spr_un }
 		completion_reward = {
 			manpower = -10000
@@ -497,6 +509,9 @@ focus = {
 		x = 13
 		y = 4
 		cost = 10
+		ai_will_do = {
+			factor = 20
+		}	
 		prerequisite = { focus= spr_camp }
 		completion_reward = {
 			MGH = {

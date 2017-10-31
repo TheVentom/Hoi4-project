@@ -14,8 +14,8 @@ division_template = {
 		infantry = { x = 2 y = 2 }
 	}
 	support = {
-		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
-		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
 		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
 	}
 }
@@ -55,8 +55,8 @@ division_template = {
 		motorized = { x = 1 y = 2 }
 	}
 	support = {
-		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
-		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+		recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
 		#light_armor = { x = 0 y = 3 }	# Tank bn had 51 L tanks, 3 ACs - (removed)
 	}
 }
@@ -116,8 +116,314 @@ division_template = {
 	}
 }
 
-### Note: OOB abstracts away the following:
-#	Marine Brigade (3x marine bn), 2 Brigades: Leningrad, Sevastopol
-#	Airborne Brigade (3x paratrooper bn), 1 Brigade: Moscow
+units = {
+	division = {
+		name = "1.a Strelkovaya Diviziya"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "7.a Strelkovaya Diviziya"
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "2.a Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "3.a Strelkovaya Diviziya"
+		location = 3672
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "4.a Strelkovaya Diviziya"
+		location = 413
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "5.a Strelkovaya Diviziya"
+		location = 3580
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "6.a Strelkovaya Diviziya"
+		location = 6262
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "8.a Strelkovaya Diviziya"
+		location = 6380
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "9.a Strelkovaya Diviziya"
+		location = 3151
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "10.a Strelkovaya Diviziya"
+		location = 3529
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "11.a Strelkovaya Diviziya"
+		location = 3672
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "12.a Strelkovaya Diviziya"
+		location = 957
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "13.a Strelkovaya Diviziya"
+		location = 3580
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "14.a Strelkovaya Diviziya"
+		location = 957
+		division_template = "Strelkovaya Diviziya"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+		}
+	division = {
+		name = "1.a Mekhanizirovaniy Korpus"
+		location = 11202
+		division_template = "Mekhanizirovaniy Korpus"
+		start_equipment_factor = 1
+		start_experience_factor = 0.6
+		}
+	division = {
+		name = "2.a Mekhanizirovaniy Korpus"
+		location = 6262
+		division_template = "Mekhanizirovaniy Korpus"
+		start_equipment_factor = 1
+		start_experience_factor = 0.6
+		}
+	division = {
+		name = "3.a Mekhanizirovaniy Korpus"
+		location = 9753
+		division_template = "Mekhanizirovaniy Korpus"
+		start_equipment_factor = 1
+		start_experience_factor = 0.6
+		}
+	division = {
+		name = "1.a Motostrelkovaya Diviziya"
+		location = 3529
+		division_template = "Motostrelkovaya Diviziya"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.a Motostrelkovaya Diviziya"
+		location = 3151
+		division_template = "Motostrelkovaya Diviziya"
+		start_equipment_factor = 1
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3.a Motostrelkovaya Diviziya"
+		location = 6380
+		division_template = "Motostrelkovaya Diviziya"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "1.a Gornostrelkovaya Diviziya"
+		location = 7375	
+		division_template = "Gornostrelkovaya Diviziya"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "2.a Gornostrelkovaya Diviziya"
+		location = 1278
+		division_template = "Gornostrelkovaya Diviziya"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3.a Gornostrelkovaya Diviziya"
+		location = 1821
+		division_template = "Gornostrelkovaya Diviziya"
+		start_equipment_factor = 0.8
+		start_experience_factor = 0.3
+	}
+	division= {			
+		name = "36ya 'Zabaikal'skaya' Strelk. Div."		
+		location = 4719
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
 
+	}			
+	division= {			
+		name = "57ya 'Ural'skaya' Strelk. Div."		
+		location = 12622
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "93ya 'Vostochno -Sibir.' Strelk. Div."		
+		location = 10559
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {			
+		name = "59ya Strelkovaya Diviziya"		
+		location = 6838
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "66ya Strelkovaya Diviziya"		
+		location = 3977
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}			
+	division= {			
+		name = "69ya Strelkovaya Diviziya"		
+		location = 11879
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	
+	navy = {	
+		name = "Baltiyskiy Flot"
+		base = 3151
+		location = 3151 # Leningrad
+		ship = { name = "Marat" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Oktyabrskaya Revolutsiya" definition = battleship equipment = { battleship_1 = { amount = 1 owner = SOV } } }
+		# 3ya Flotiliya Esmintsev
+		ship = { name = "Engels" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Artyom" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Volodarskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Yakov Sverdlov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Frunze" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		# 4ya Flotiliya Esmintsev
+		ship = { name = "Lenin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Voykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Rykov" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+		ship = { name = "Karl Libknekht" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }		
+	}	
+	navy = {	
+		name = "Baltiyskiy Podvodniy Flot"
+		base = 3151
+		location = 3151 # Leningrad
+		# 1iy Podvodniy Flot
+		ship = { name = "Shch-301" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-302" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-303" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-304" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-305" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-306" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-307" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-308" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 2iy Podvodniy Flot
+		ship = { name = "Shch-113" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-114" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-115" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-116" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 6iy Podvodniy Flot
+		ship = { name = "Shch-117" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-118" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-119" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-120" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 7ij  Podvodniy Flot
+		ship = { name = "Shch-201" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-202" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-203" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-204" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-309" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}
+
+	### Pacific Fleet -- Vladivostok
+	navy = {	
+		name = "Tikhookeanskiy Flot"
+		base = 957
+		location = 957 # Vladivostok
+		# 8ya Flotiliya Esmintsev
+		ship = { name = "Uritskiy" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+		ship = { name = "Stalin" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = SOV } } }
+	}	
+	navy = {	
+		name = "Tihookyeanskiy Podvodniy Flot"
+		base = 957
+		location = 957 # Vladivostok
+		# 10iy Podvodniy Flot
+		ship = { name = "Shch-101" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-102" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-103" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-104" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-105" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-106" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		# 11iy Podvodniy Flot
+		ship = { name = "Shch-107" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-108" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-109" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-110" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-111" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+		ship = { name = "Shch-112" definition = submarine equipment = { submarine_1 = { amount = 1 owner = SOV } } }			
+	}		
+}					
+air_wings = {
+	# LVO Aviatsya Komandovaniya -- Leningrad
+	195 = { 
+		# 15ya Istrebitel'nye Aviabrigada
+		fighter_equipment_0 = {
+			owner = "SOV" 
+			amount = 100
+		}
+		# 18ya Bombardirovochnye Aviabrigada
+		tac_bomber_equipment_0 =  {
+			owner = "SOV" 
+			amount = 100
+		}
+	}
+}
 
