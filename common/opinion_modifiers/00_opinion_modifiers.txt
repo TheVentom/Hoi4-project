@@ -574,7 +574,10 @@ opinion_modifiers = {
 		trade = yes
 		value = 5
 	}
-
+	faction_trade = {
+		trade = yes
+		value = 50
+	}
 	### UK/BRITAIN/ENG FOCUS TREE ###
 	
 	ENG_benelux_intervention_USA = {

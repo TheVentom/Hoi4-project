@@ -197,11 +197,12 @@ ideologies = {
 		}
 		
 		faction_modifiers = {
+			justify_war_goal_when_in_major_war_time = -0.80
 		}
 
-		can_be_boosted = no
+		can_be_boosted = yes
 		can_collaborate = yes
 
-		ai_neutral = yes # 
+		ai_fascist = yes # 
 	}
 }

@@ -8,7 +8,7 @@ state=
 	state_category = rural
 	
 	history = {
-		owner = UBC
+		owner = POL
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1
@@ -16,7 +16,7 @@ state=
 				naval_base = 1
 			}
 		}
-		add_core_of = UBC
+		add_core_of = POL
 
 		1939.3.22 = {
 			owner = GER

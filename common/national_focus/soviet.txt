@@ -145,4 +145,86 @@ focus_tree = {
 			ALA = { country_event = sov.7 }
 		}
 		}
+	focus = {
+		id = SOV_trade
+		x = 1
+		y = 1
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = { focus = SOV_AUS }
+		completion_reward = {
+				AUS = {
+				add_opinion_modifier = { target = SOV modifier = faction_trade }
+			}
+		}
+	}
+	focus = {
+		id = SOV_rhodesia
+		x = 0
+		y = 2
+		icon = GFX_goal_generic_military_deal
+		cost = 10
+		prerequisite = { focus = SOV_trade }
+		mutually_exclusive = {
+			focus = SOV_eth 
+			}
+		completion_reward = {
+			ZIM = {
+				country_event = sov.6
+				}
+			}
+		}
+	focus = {
+		id = SOV_eth
+		x = 2
+		y = 2
+		icon= GFX_goal_generic_military_deal
+		cost = 10
+		ai_will_do = {
+			factor = 20
+		}
+		prerequisite = { focus = SOV_trade }
+		mutually_exclusive = {
+			focus = SOV_rhodesia }
+		completion_reward = {
+			ETH = {
+				country_event = sov.6
+				}
+			}
+		}
+	focus = {
+		id = SOV_t_eth
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = SOV_eth }
+		completion_reward = {
+			ETH = {
+				add_opinion_modifier = {target = SOV modifier = faction_trade }
+			}
+		}
+	}
+	focus = {
+		id = SOV_t_rho
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = {
+			focus = SOV_rhodesia }
+		completion_reward = {
+			ZIM = {
+				add_opinion_modifier = { target = SOV modifier = faction_trade }
+			}
+		}
+	}
+	focus = {
+		id = SOV_uss
+		x = 8
+		y = 3
+		prerequisite = {
+			focus = SOV_west_slavs
+			focus = SOV_chrom
+			}
+		cost = 10
 		}

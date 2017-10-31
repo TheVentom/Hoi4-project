@@ -9,11 +9,11 @@ state={
 	}
 
 	history={
-		owner = LOU
+		owner = ORE
 		buildings = {
 			infrastructure = 4
 		}
-		add_core_of = LOU
+		add_core_of = ORE
 		victory_points = {
 			4860 1 
 		}
