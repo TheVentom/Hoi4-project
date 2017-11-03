@@ -18,7 +18,7 @@ country_event = {
 	option = { # Let'em go
 		name = kau.1.a
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 			NOR = {
 				transfer_state = 110
@@ -44,7 +44,7 @@ country_event = {
 	option = {
 		name = kau.2.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 			NOR = {
 				transfer_state = 110
@@ -90,7 +90,7 @@ country_event = {
 			country_event = { id = kau.5 }
 		}
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 			DEN = {
 				transfer_state = 99
@@ -113,7 +113,7 @@ country_event = {
 	option = {
 		name = kau.2.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 		DEN = {
 			country_event = { id = kau.5 }
@@ -158,7 +158,7 @@ country_event = {
 	option = { # Let'em go
 		name = kau.3.a
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 			ICE = {
 				transfer_state = 100
@@ -179,7 +179,7 @@ country_event = {
 	option = {
 		name = kau.3.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 			ICE = {
 				transfer_state = 100
@@ -220,7 +220,7 @@ country_event = {
 	option = { # Let'em go
 		name = kau.4.a
 		ai_chance = {
-			factor = 50
+			factor = 90
 		}
 		FIN = {
 				transfer_state = 111
@@ -231,6 +231,7 @@ country_event = {
 				transfer_state = 146
 				transfer_state = 215
 				transfer_state = 213
+				transfer_state = 147
 				}
 			FIN = {
 				add_ideas = sisu
@@ -253,7 +254,7 @@ country_event = {
 	option = {
 		name = kau.4.b
 		ai_chance = {
-			factor = 50
+			factor = 10
 		}
 			FIN = {
 				transfer_state = 111
@@ -264,6 +265,8 @@ country_event = {
 				transfer_state = 146
 				transfer_state = 215
 				transfer_state = 213
+				transfer_state = 147
+				
 				}
 			FIN = {
 				add_ideas = sisu
@@ -298,7 +301,7 @@ country_event = {
 	option = {
 		name = kau.5.a
 		ai_chance = {
-			factor = 50
+			factor = 60
 		}
 		GER = {
 			transfer_state = 58
@@ -307,7 +310,45 @@ country_event = {
 	option = {
 		name = kau.5.b
 		ai_chance = {
-			factor = 50
+			factor = 40
+			}
+		GER = {
+			declare_war_on = {
+				target = DEN
+				type = take_state
+				generator = { 58 }
+				}
+			}
+		}
+	}
+	
+country_event = {
+	id = kau.6
+	title = kau.6.t
+	desc = kau.6.d
+	fire_only_once = yes
+	trigger = {
+		tag = DEN
+		has_defensive_war = no
+		date > 1936.4.1
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kau.6.a
+		ai_chance = {
+			factor = 100
+		}
+		GER = {
+			transfer_state = 58
+			}
+		}
+	option = {
+		name = kau.6.b
+		ai_chance = {
+			factor = 0
 			}
 		GER = {
 			declare_war_on = {
