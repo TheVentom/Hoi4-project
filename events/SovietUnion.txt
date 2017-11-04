@@ -1,5 +1,7 @@
 ﻿add_namespace = sov
 
+
+		
 country_event = {
 	id = sov.1
 	title = sov.1.t
@@ -167,7 +169,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = 7.a
+		name = sov.7.a
 		ai_chance = {
 			factor = 70
 			}
@@ -177,13 +179,247 @@ country_event = {
 			}
 		}
 	option = {
-		name = 996.b
+		name = sov.7.b
 		ai_chance = {
 			factor = 30
 			}
+		SOV = {
 		create_wargoal = {
-			type = annex_everything
-			target = ALA
+				type = annex_everything
+				target = ALA
+		}
 		}
 	}
 }
+
+
+country_event = {
+	id= sov.10
+	title = sov.10.t
+	desc = sov.10.d
+	is_triggered_only = yes
+		option = {
+			name = 10.a
+			ai_chance = {
+				factor = 90
+				}
+			SOV = { country_event = sov.9 }
+			}
+		option = {
+			name = 10.b
+			ai_chance = {
+				factor = 10
+			}
+		}
+	}
+		
+country_event = {
+	id = sov.11
+	title = sov.11.t
+	desc = sov.11.d
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.11.a
+		ai_chance = {
+			factor = 50
+			}
+		SOV = {
+			transfer_state = 191
+			transfer_state = 3
+		}
+		191 = {
+			add_core_of = SOV
+			}
+		3 = {
+			add_core_of = SOV
+			}
+		}
+	option = {
+		name = sov.11.b
+		ai_chance = {
+			factor = 10
+			}
+		SOV = {
+			create_wargoal = {
+				target = EST
+				type = annex_everything
+				}
+			}
+		}
+	}
+
+country_event = {
+	id = sov.12
+	title = sov.12.t
+	desc = sov.12.d
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.12.a
+		ai_chance = {
+			factor = 50
+			}
+		SOV = {
+			transfer_state = 12
+			transfer_state = 190
+		}
+		190 = {
+			add_core_of = SOV
+			}
+		12 = {
+			add_core_of = SOV
+			}
+		}
+	option = {
+		name = sov.12.b
+		ai_chance = {
+			factor = 10
+			}
+		SOV = {
+			create_wargoal = {
+				target = LAT
+				type = annex_everything
+				}
+			}
+		}
+	}
+
+country_event = {
+	id = sov.13
+	title = sov.13.t
+	desc = sov.13.d
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.13.a
+		ai_chance = {
+			factor = 80
+			}
+		SOV = { country_event = sov.14 }
+		}
+	option = {
+		name = sov.13.b
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+country_event = {
+	id = sov.14
+	title = sov.14.t
+	desc = sov.14.d
+	is_triggered_only = yes
+	
+	option = {
+		name = 14.a
+		ai_chance = {
+			factor = 100
+			}
+		add_to_faction = BUL
+		}
+	}
+country_event = {
+	id = sov.15
+	title = sov.15.t
+	desc = sov.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = sov.15.a
+		ai_chance = {
+			factor = 90
+			}
+		BUL = {
+			transfer_state = 184
+			transfer_state = 341
+			transfer_state = 731
+			}
+		184 = {
+			add_core_of = BUL
+				}
+		341 = {
+			add_core_of = BUL
+			}
+		731 = {
+			add_core_of = BUL
+				}
+			}
+	option = {
+		name = sov.15.b
+		ai_chance = {
+			factor = 10
+			}
+		BUL = {
+			declare_war_on = {
+				target = GRE
+				type = take_state
+				generator = { 341 }
+			}
+		}
+	}
+}
+country_event = {
+	id = sov.9
+	title = sov.9.t
+	desc = sov.9.d
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.9.a
+		ai_chance = {
+			factor = 100
+			}
+		add_to_faction = ETH
+	}
+}
+country_event = {
+	id = sov.8
+	title = sov.8.t
+	desc = sov.8.d
+	is_triggered_only = yes
+	
+	option = {
+		name = sov.8.a
+		ai_chance = {
+			factor = 80
+		}
+		SOV = {
+			transfer_state = 146
+		}
+		SOV = {
+			transfer_state = 215 }
+		SOV = {	transfer_state = 147}
+		SOV = {		transfer_state = 213}
+		SOV = {	transfer_state = 722}
+		}
+		146 = {
+			add_core_of = SOV
+		}
+		215 = {
+			add_core_of = SOV
+		}
+		147 = {
+			add_core_of = SOV
+		}
+		213 = {
+			add_core_of = SOV
+		}
+		722 = {
+			add_core_of = SOV
+		}
+		add_political_power = 150
+	}
+	option = {
+		name = sov.8.b
+		ai_chance = {
+			factor = 20
+			}
+		SOV = {
+			declare_war_on = FIN
+			}
+		}
+	}
+
+

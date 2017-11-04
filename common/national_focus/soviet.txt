@@ -188,7 +188,7 @@ focus_tree = {
 			focus = SOV_rhodesia }
 		completion_reward = {
 			ETH = {
-				country_event = sov.6
+				country_event = sov.10
 				}
 			}
 		}
@@ -222,9 +222,501 @@ focus_tree = {
 		id = SOV_uss
 		x = 8
 		y = 3
+		available = { 
+			country_exists = FIN
+			}
+			
 		prerequisite = {
 			focus = SOV_west_slavs
-			focus = SOV_chrom
+			}
+		completion_reward = {
+			FIN = {
+				country_event = sov.8
+				}
 			}
 		cost = 10
+		}
+	focus = {
+		id = SOV_int
+		x = 8
+		y = 4
+		cost = 10
+		prerequisite = {
+			focus = SOV_uss
+			}
+		completion_reward = {
+			202 = {	
+				add_core_of = SOV
+			}
+			78 = {	
+				add_core_of = SOV
+			}
+			192 = {	
+				add_core_of = SOV
+			}
+			198 = {	
+				add_core_of = SOV
+			}
+			199 = {	
+				add_core_of = SOV
+			}
+			201 = {	
+				add_core_of = SOV
+			}
+			194 = {	
+				add_core_of = SOV
+			}
+			193 = {	
+				add_core_of = SOV
+			}
+			225 = {	
+				add_core_of = SOV
+			}
+			259 = {	
+				add_core_of = SOV
+			}
+			203 = {	
+				add_core_of = SOV
+			}
+			202 = {	
+				add_core_of = SOV
+			}
+			197 = {	
+				add_core_of = SOV
+			}
+			196 = {	
+				add_core_of = SOV
+			}
+			200 = {	
+				add_core_of = SOV
+			}
+			227 = {	
+				add_core_of = SOV
+			}
+			228 = {	
+				add_core_of = SOV
+			}
+			226 = {	
+				add_core_of = SOV
+			}
+			221 = {	
+				add_core_of = SOV
+			}
+			204 = {	
+				add_core_of = SOV
+			}
+			206 = {	
+				add_core_of = SOV
+			}
+			207 = {	
+				add_core_of = SOV
+			}
+			242 = {	
+				add_core_of = SOV
+			}
+			243 = {	
+				add_core_of = SOV
+			}
+			241 = {
+				add_core_of = SOV
+			}
+		}
+	}	
+	focus = {
+		id = SOV_fort
+		x = 6
+		y = 2
+		cost = 10
+		icon = GFX_goal_generic_construct_military
+		prerequisite = {
+			focus = SOV_west_slavs 
+			}
+		completion_reward = {
+			78 = {
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3701
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3704
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3724
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3707
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 565
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3577
+							instant_build = yes
+						}
+						add_building_construction = {
+							type = bunker
+							level = 4
+							province = 3407
+							instant_build = yes
+						}
+					}
+				}
+			}
+
+	focus = {
+		id = SOV_baltic
+		x = 6
+		y = 3
+		prerequisite = {
+			focus = SOV_fort
+			focus = SOV_infra1
+			}
+		cost = 10
+		completion_reward = {
+			EST = {
+				country_event = { id = sov.11}
+				}
+			LAT = {
+				country_event = { id = sov.12 }
+			}
+		}
+	}
+	focus = {
+		id = SOV_infra
+		x = 6
+		y = 4
+		prerequisite = {
+			focus = SOV_baltic 
+			}
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		completion_reward = {
+			195 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			244 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			264 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			247 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			219 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			223 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			258 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			260 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			265 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			217	 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			238 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			234 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			137 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = SOV_moskva
+		x = 8
+		y = 5
+		cost = 10
+		prerequisite = {
+			focus = SOV_infra
+			focus = SOV_int
+			focus = SOV_port1
+		}
+		completion_reward = {
+			219 = {
+				add_extra_state_shared_building_slots = 10
+					add_building_construction = {
+						type = industrial_complex
+						level = 4
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 4
+						instant_build = yes
+					}
+				}	
+			}
+		}
+	focus = {
+		id = SOV_port
+		x = 12
+		y = 3
+		cost  = 10
+		prerequisite = {
+			focus =SOV_oil
+		}
+		completion_reward = {
+			137 = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			585 = {
+				add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				
+			}
+		}
+		focus = {
+			id = SOV_port1
+			x = 12
+			y = 4
+			cost  = 10
+			prerequisite = {
+				focus =SOV_port
+			}
+			completion_reward = {
+				218 = {
+					add_extra_state_shared_building_slots = 4
+						add_building_construction = {
+							type = dockyard
+							level = 4
+							instant_build = yes
+						}
+					}
+				
+			}
+		}
+		focus = {
+			id = SOV_bul
+			x = 1
+			y = 4
+			cost = 3
+			prerequisite = {
+				focus = SOV_t_eth
+				focus = SOV_t_rho
+				}
+			completion_reward = {
+				BUL = {
+					country_event = { id= political.12 }
+				}
+			}
+		}
+		focus = {
+			id = SOV_bul1
+			x = 1
+			y = 5
+			cost = 3
+			prerequisite = {
+				focus = SOV_bul
+				}
+			completion_reward = {
+				BUL = {
+					country_event = { id= sov.13 }
+				}
+			}
+		}
+		focus = {
+			id = SOV_gre
+			x = 3
+			y = 6
+			cost = 10
+			prerequisite = {
+				focus = SOV_bul1
+				focus = SOV_infra
+				focus = SOV_int
+				}
+			completion_reward = {
+				GRE = {
+					country_event = { id=sov.15}
+				}
+			}
+		}
+		focus = {
+			id = SOV_ural
+			x = 4
+			y = 0
+			cost = 10
+				completion_reward = {
+			398 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+		}
+		focus = {
+			id = SOV_bltc
+			x = 4
+			y = 1
+			cost = 10
+			prerequisite = {
+				focus = SOV_ural
+			}
+			completion_reward = {
+			195 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+		}
+		focus = {
+			id = SOV_east
+			x = 4
+			y = 2
+			cost = 10
+			prerequisite = {
+				focus = SOV_bltc
+			}
+			completion_reward = {
+			408 = {
+				add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+		}
+		focus = {
+			id = SOV_infra1
+			x = 4
+			y = 3
+			cost = 10
+			prerequisite = {
+				focus = SOV_east
+			}
+			completion_reward = {
+			408 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 6	
+						instant_build = yes
+					}
+				}
+			231 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 6	
+						instant_build = yes
+					}
+				}
+			229 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 6	
+						instant_build = yes
+					}
+				}
+			}
 		}
