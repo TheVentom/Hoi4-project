@@ -241,7 +241,7 @@ add_to_faction = GER
 
 
 add_ideas = {
-	sour_loser
+	triumphant_will
 	general_staff
 	limited_exports
 	limited_conscription

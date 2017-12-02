@@ -123,6 +123,7 @@ country_event = {
 	title = ger.2.t
 	desc = ger.2.d
 	
+	is_triggered_only = yes
 	option = {
 		name = ger.2.a
 		ai_chance = {
@@ -157,7 +158,7 @@ country_event = {
 	id = ger.3
 	title = ger.3.t
 	desc = ger.3.d
-	
+	is_triggered_only = yes
 	option = {
 		name = ger.3.a
 		ai_chance = {
@@ -196,7 +197,7 @@ country_event = {
 	id = ger.4
 	title = ger.4.t
 	desc = ger.4.d
-	
+	is_triggered_only = yes
 	option = {
 		name = ger.4.a
 		ai_chance = {
@@ -227,7 +228,7 @@ country_event = {
 	id = ger.5
 	title = ger.5.t
 	desc = ger.5.d
-	
+	is_triggered_only = yes
 	option = {
 		name = ger.5.a
 		ai_chance = {
@@ -253,6 +254,12 @@ country_event = {
 		6 = {
 			add_core_of = BEL
 		}
+		GER = {
+			puppet = BEL
+		}
+		BEL = {
+			load_oob = BEL_1936
+			}
 	}
 	option = {
 		name = ger.5.b
@@ -268,5 +275,34 @@ country_event = {
 		}
 	}
 }
-		
-	
+country_event = {
+	id = ger.6
+	title = ger.6.t
+	desc = ger.6.d
+	is_triggered_only = yes	
+	option = {
+		name = ger.6.a
+		ai_chance = {
+			factor = 40
+			}
+		GER = {
+			transfer_state = 86
+			}
+		86 = {
+			add_core_of = GER
+			}
+		}
+	option = {
+		name = ger.6.b
+		ai_chance = {
+			factor = 60
+			}
+		GER = {
+			declare_war_on = {
+				target = POL
+				type = take_state
+				generator = { 86 }
+			}
+		}
+	}
+}
