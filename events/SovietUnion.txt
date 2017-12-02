@@ -226,12 +226,12 @@ country_event = {
 			}
 		SOV = {
 			transfer_state = 191
-			transfer_state = 3
+			transfer_state = 13
 		}
 		191 = {
 			add_core_of = SOV
 			}
-		3 = {
+		13 = {
 			add_core_of = SOV
 			}
 		}

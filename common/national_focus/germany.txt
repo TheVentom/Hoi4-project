@@ -1,0 +1,40 @@
+focus_tree = {
+	id = ger_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			original_tag = GER
+		}
+	}
+focus = {
+	id = ger_q
+	x = 1
+	y = 0
+	cost = 5
+	
+	completion_reward = {
+		add_political_power = 150
+		hidden_effect ={
+				news_event = { hours = 6 id = news.331 }
+			}
+		}
+	}
+focus = {
+	id = ger_cz
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = ger_q }
+	
+	
+	completion_reward = {
+		add_national_unity = 0.1
+		CZE = {
+			country_event = { id = ger.1 }
+		}
+	}
+}
+		

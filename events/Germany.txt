@@ -1,1 +1,118 @@
-﻿
+﻿add_namespace = ger
+
+country_event = {
+	id = ger.1
+	title = ger.1.t
+	desc = ger.1.d
+	picture = picture = GFX_report_event_german_speech
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ger.1.a
+		ai_chance = {
+			factor = 10
+		}
+		GER = {
+			transfer_state = 66
+			transfer_state = 67
+			}
+		66 = {
+			add_core_of = GER
+			}
+		67 = {
+			add_core_of = GER
+			}
+		AUS = {
+			declare_war_on = {
+				target = CZE
+				type = take_state
+				generator = { 9 }
+				}
+		}
+	}
+	option = {
+		name = ger.1.b
+		ai_chance = {
+			factor = 10
+			}
+		AUS = {
+			transfer_state = 9
+			transfer_state = 75
+			transfer_state = 69
+			transfer_state = 74
+			}
+		74 = {
+			add_core_of = AUS
+		}
+		9 = {
+			add_core_of = AUS
+		}
+		75 = {
+			add_core_of = AUS
+			}
+		69 = {
+			add_core_of = AUS
+		}
+		GER = {
+			declare_war_on = {
+				target = CZE
+				type = take_state
+				generator = { 66 }
+				}
+		}
+	}
+	option = {
+		name = ger.1.c
+		ai_chance = {
+			factor  = 10
+		}
+		AUS = {
+			declare_war_on = {
+				target = CZE
+				type = take_state
+				generator = { 9 }
+				}
+		}
+			GER = {
+		declare_war_on = {
+				target = CZE
+				type = take_state
+				generator = { 66 }
+				}
+		}
+	}
+	option = {
+		name = ger.1.de
+		ai_chance = {
+			factor = 70
+			}
+		AUS = {
+			transfer_state = 9
+			transfer_state = 75
+			transfer_state = 69
+			transfer_state = 74
+			}
+		9 = {
+			add_core_of = AUS
+		}
+		75 = {
+			add_core_of = AUS
+			}
+		74 = {
+			add_core_of = AUS
+		}
+		69 = {
+			add_core_of = AUS
+		}
+		GER = {
+			transfer_state = 66
+			transfer_state = 67
+			}
+		66 = {
+			add_core_of = GER
+			}
+		67 = {
+			add_core_of = GER
+			}
+		}

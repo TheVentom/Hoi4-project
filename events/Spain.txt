@@ -139,13 +139,16 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}
-		create_wargoal = {
+		SPR ={
+			create_wargoal = {
 				type = take_state_focus
 				target = VEN
 				generator = { 489 }
 				}
 			}
 		}
+	}
+		
 country_event = {
 	id = spain.5
 	title = spain.5.t

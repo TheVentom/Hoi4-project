@@ -244,12 +244,6 @@ country_event = {
 				set_national_unity = 0.8
 			}
 			
-			FIN = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 1
-				}
-			}
 	}
 	option = {
 		name = kau.4.b
@@ -279,12 +273,6 @@ country_event = {
 				set_national_unity = 0.8
 			}
 			
-			FIN = {
-			add_popularity = {
-				ideology = democratic
-				popularity = 1
-				}
-			}
 
 
 		create_wargoal = {

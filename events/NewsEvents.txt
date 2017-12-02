@@ -12755,3 +12755,22 @@ news_event = {
 		}
 	}
 }
+news_event = {
+	id = news.331
+	title = news.331.t
+	desc = news.331.d
+	picture = GFX_news_event_german_speech
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.331.a
+		trigger = {
+			NOT = {
+				TAG = GER
+			}
+		}
+	}
+}

@@ -8,13 +8,13 @@ set_technology = {
 	mass_assault = 1
 }
 
-set_convoys = 5
+set_convoys = 10
 
 set_politics = {
 
 	parties = {
 		democratic = { 
-			popularity = 35
+			popularity = 5
 		}
 
 		fascism = {
@@ -22,16 +22,15 @@ set_politics = {
 		}
 		
 		communism = {
-			popularity = 30
-			#banned = no #default is no
+			popularity = 80
 		}
 		
 		neutrality = { 
 			popularity = 10
 		}
 	}
-	ruling_party = democratic
-	last_election = "1936.1.1"
+	ruling_party = stalinism
+	last_election = "1936.5.5"
 	election_frequency = 48
 	elections_allowed = yes
 }
