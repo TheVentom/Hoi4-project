@@ -17,12 +17,7 @@ country_event = {
 			transfer_state = 66
 			transfer_state = 67
 			}
-		66 = {
-			add_core_of = GER
-			}
-		67 = {
-			add_core_of = GER
-			}
+		66 = { add_core_of = GER } 67 = { add_core_of = GER } 9 = { add_core_of = AUS } 75 = { add_core_of = AUS } 74 = { add_core_of = AUS } 69 = { add_core_of = AUS }
 		AUS = {
 			declare_war_on = {
 				target = CZE
@@ -42,18 +37,7 @@ country_event = {
 			transfer_state = 69
 			transfer_state = 74
 			}
-		74 = {
-			add_core_of = AUS
-		}
-		9 = {
-			add_core_of = AUS
-		}
-		75 = {
-			add_core_of = AUS
-			}
-		69 = {
-			add_core_of = AUS
-		}
+		66 = { add_core_of = GER } 67 = { add_core_of = GER } 9 = { add_core_of = AUS } 75 = { add_core_of = AUS } 74 = { add_core_of = AUS } 69 = { add_core_of = AUS }
 		GER = {
 			declare_war_on = {
 				target = CZE
@@ -81,6 +65,7 @@ country_event = {
 				generator = { 66 }
 				}
 		}
+		66 = { add_core_of = GER } 67 = { add_core_of = GER } 9 = { add_core_of = AUS } 75 = { add_core_of = AUS } 74 = { add_core_of = AUS } 69 = { add_core_of = AUS }
 	}
 	option = {
 		name = ger.1.de
@@ -145,6 +130,12 @@ country_event = {
 		ai_chance = {
 			factor = 10
 			}
+		65 = {
+			add_core_of = GER
+			}
+		60 = {
+			add_core_of = GER
+			}
 		GER = {
 			declare_war_on = {
 				target = SAX
@@ -184,6 +175,15 @@ country_event = {
 		ai_chance = {
 			factor = 30
 			}
+			54 = {
+			add_core_of = GER
+			}
+		53 = {
+			add_core_of = GER
+			}
+		52 = {
+			add_core_of = GER
+			}
 		GER = {
 			declare_war_on = {
 				target = BAV
@@ -209,11 +209,14 @@ country_event = {
 		50 = {
 			add_core_of = GER
 			}
-		}
+	}
 	option = {
 		name = ger.4.b
 		ai_chance = {
 			factor = 40
+			}
+		50 = {
+			add_core_of = GER
 			}
 		GER = {
 			declare_war_on = {
@@ -266,6 +269,15 @@ country_event = {
 		ai_chance = {
 			factor = 40
 			}
+		36 = {
+			add_core_of = GER
+			}
+		7 = {
+			add_core_of = GER
+			}
+		35 = {
+			add_core_of = GER
+			}
 		GER = {
 			declare_war_on = {
 				target = HOL
@@ -304,5 +316,8 @@ country_event = {
 				generator = { 86 }
 			}
 		}
+		86 = {
+			add_core_of = GER
+			}
 	}
 }
