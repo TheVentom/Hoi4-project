@@ -116,3 +116,157 @@ country_event = {
 			add_core_of = GER
 			}
 		}
+	}
+	
+country_event = {
+	id = ger.2
+	title = ger.2.t
+	desc = ger.2.d
+	
+	option = {
+		name = ger.2.a
+		ai_chance = {
+			factor = 90
+			}
+		GER = {
+			transfer_state = 65
+			transfer_state = 60
+			}
+		65 = {
+			add_core_of = GER
+			}
+		60 = {
+			add_core_of = GER
+			}
+		}
+	option = {
+		name = ger.2.b
+		ai_chance = {
+			factor = 10
+			}
+		GER = {
+			declare_war_on = {
+				target = SAX
+				type = take_state
+				generator = { 65 }
+			}
+		}
+	}
+}
+country_event = {
+	id = ger.3
+	title = ger.3.t
+	desc = ger.3.d
+	
+	option = {
+		name = ger.3.a
+		ai_chance = {
+			factor = 70
+			}
+		GER = {
+			transfer_state = 54
+			transfer_state = 53
+			transfer_state = 52
+			}
+		54 = {
+			add_core_of = GER
+			}
+		53 = {
+			add_core_of = GER
+			}
+		52 = {
+			add_core_of = GER
+			}
+		}
+	option = {
+		name = ger.3.b
+		ai_chance = {
+			factor = 30
+			}
+		GER = {
+			declare_war_on = {
+				target = BAV
+				type = take_state
+				generator = { 54 }
+			}
+		}
+	}
+}
+country_event = {
+	id = ger.4
+	title = ger.4.t
+	desc = ger.4.d
+	
+	option = {
+		name = ger.4.a
+		ai_chance = {
+			factor = 60
+			}
+		GER = {
+			transfer_state = 50
+			}
+		50 = {
+			add_core_of = GER
+			}
+		}
+	option = {
+		name = ger.4.b
+		ai_chance = {
+			factor = 40
+			}
+		GER = {
+			declare_war_on = {
+				target = LUX
+				type = take_state
+				generator = { 50 }
+			}
+		}
+	}
+}
+country_event = {
+	id = ger.5
+	title = ger.5.t
+	desc = ger.5.d
+	
+	option = {
+		name = ger.5.a
+		ai_chance = {
+			factor = 60
+			}
+		GER = {
+			transfer_state = 36
+			transfer_state = 7
+			transfer_state = 35
+			}
+		36 = {
+			add_core_of = GER
+			}
+		7 = {
+			add_core_of = GER
+			}
+		35 = {
+			add_core_of = GER
+			}
+		BEL = {
+			transfer_state = 6
+			}
+		6 = {
+			add_core_of = BEL
+		}
+	}
+	option = {
+		name = ger.5.b
+		ai_chance = {
+			factor = 40
+			}
+		GER = {
+			declare_war_on = {
+				target = HOL
+				type = take_state
+				generator = { 36 }
+			}
+		}
+	}
+}
+		
+	

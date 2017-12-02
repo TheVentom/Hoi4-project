@@ -159,9 +159,10 @@ country_event = {
 		effect_tooltip = {
 			TWS = {
 				transfer_state = 39
-				add_core_of = 39
 			}
-		}
+			39 = {
+				add_core_of = TWS
+}		}
 	}
 	option = {
 		name = tws.7.b
@@ -189,7 +190,9 @@ country_event = {
 	option = {
 		name = tws.7.a
 		transfer_state = 39
-		add_core_of = 39
+		39 = {
+			add_core_of = TWS
+	}
 	}
 }
 #Istria
@@ -210,10 +213,12 @@ country_event = {
 		effect_tooltip = {
 			TWS = {
 				transfer_state = 736
-				add_core_of = 736
 			}
-		}
+			736 = {
+				add_core_of = TWS
+			}
 	}
+}
 	option = {
 		name = tws.9.b
 		ai_chance = {

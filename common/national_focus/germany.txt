@@ -11,7 +11,7 @@ focus_tree = {
 	}
 focus = {
 	id = ger_q
-	x = 1
+	x = 3
 	y = 0
 	cost = 5
 	
@@ -37,4 +37,757 @@ focus = {
 		}
 	}
 }
+focus = {
+	id = ger_dan
+	x = 2
+	y = 2
+	cost = 10
+	prerequisite = { focus = ger_cz }
+	
+	completion_reward = {
+		GER = {
+			declare_war_on = {
+				target = UBC
+				type = annex_everything
+				}
+			}
+		}
+	}
+focus = {
+	id = ger_indeast
+	x = 5
+	y = 1
+	cost = 10
+	prerequisite = { focus = ger_q }
+	
+	completion_reward = {
+	 5 = {
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+	}
+	85 = {
+		add_extra_state_shared_building_slots = 4
+		add_building_construction = {
+			type = arms_factory
+			level = 2
+			instant_build = yes
+		}
+		add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+		}
+	}
+}
+}
+focus = { #Weichsel fortification
+	id = ger_weichsel
+	x = 4
+	y = 2
+	cost = 10
+	prerequisite = {
+		focus = ger_indeast }
+	
+	completion_reward = {
+		85 = {
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 279
+				instant_build = yes
+				}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 3324
+				instant_build = yes
+				}
+			add_building_construction = {
+				type = bunker
+				level = 3
+				province = 279
+				instant_build = yes
+				}
+		}
+	}
+}
+focus = { #saxony
+	id = ger_saxony
+	x = 3
+	y = 3
+	cost = 10
+	prerequisite = {
+		focus = ger_weichsel
+		focus = ger_dan
+		}
+	
+	completion_reward = {
+		SAX = {
+			country_event = {
+				id = ger.2
+			}
+		}
+	}
+}
+
+focus = {
+	id = ger_bav
+	x = 3
+	y = 4
+	prerequisite = {
+		focus = ger_saxony
+		}
+	cost = 10
+	
+	completion_reward = {
+		BAV = {
+			country_event = { id = ger.3}
+			}
+		}
+	}
+focus = {
+	id = ger_wut
+	x = 3
+	y = 5
+	prerequisite = {
+		focus = ger_bav 
+	}
+	cost = 10
+	
+	completion_reward = {
+		LUX = {
+			country_event = { id = ger.4}
+		}
+	}
+}
+focus = {
+	id = ger_rhine
+	x = 1
+	y = 6
+	prerequisite = {
+		focus = ger_wut }
+	cost = 10
+	completion_reward = {
+		51 = {
+			add_resource = {
+				type = steel
+				amount = 54
+				}
+			}
+		}
+	}
+focus = {
+	id = ger_hann
+	x = 3
+	y = 6
+	prerequisite = {
+		focus = ger_wut }
+	cost = 10
+	completion_reward = {
+		59 = {
+			add_resource = {
+				type = oil
+				amount = 23
+				}
+			}
+		}
+	}
+focus = {
+	id = ger_pomer
+	x = 5
+	y = 6
+	prerequisite = {
+		focus = ger_wut }
+	cost = 10
+	completion_reward = {
+		63 = {
+			add_resource = {
+				type = aluminium
+				amount = 37
+				}
+			}
+		}
+	}
+focus = {
+	id = ger_autobahn
+	x = 0
+	y = 0
+	cost = 10
+	completion_reward = {
+			64 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			59 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			55 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			51 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			68 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			63 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			85 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+			5 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+focus = {
+	id = ger_krieg
+	x = 9
+	y = 4
+	prerequisite = { focus = ger_destroyer_effort focus = ger_capital_ships_effort }
+	
+	cost = 10
+	completion_reward = {
+		59 = {
+			add_extra_state_shared_building_slots = 5
+			add_building_construction = {
+			type = dockyard
+			level = 5
+			instant_build = yes
+		}
+	}
+}
+}
+focus = {
+		id = GER_army_innovation
+		icon = GFX_goal_generic_axis_build_infantry
+		x = 15
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			army_experience = 10
+
+			
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = walther_von_brauchitsch			
+		}
+	}
+focus = {
+		id = GER_army_innovation_2
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = GER_army_innovation }
+		x = 15
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 20
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				name = mech_army_bonus
+				technology = basic_medium_tank
+				technology = improved_medium_tank
+				technology = advanced_medium_tank
+				technology = mechanised_infantry
+			}	
+		}
+	}
+focus = {
+		id = ger_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = GER_army_innovation_2 }
+		x = 15
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons_bonus
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+focus = {
+		id = ger_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = ger_equipment_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 15
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.75
+				technology = motorised_infantry
+			}
+		}
+	}
+focus = {
+		id = ger_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = ger_motorization_effort }
+		x = 15
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 0.5
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+focus = {
+		id = ger_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 9
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = ger_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ger_naval_effort }
+		mutually_exclusive = { focus = ger_large_navy }
+		x = 8
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 0.5
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = ger_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = ger_naval_effort }
+		mutually_exclusive = { focus = ger_flexible_navy }
+		x = 10
+		y = 1
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 0.5
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = ger_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ger_flexible_navy focus = ger_large_navy }
+		x = 8
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_submarine
+				technology = basic_submarine
+				technology = improved_submarine
+				technology = advanced_submarine
+			}
+		}
+	}
+
+	focus = {
+		id = ger_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = ger_large_navy focus = ger_flexible_navy }
+		x = 10
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = improved_light_cruiser
+				technology = advanced_light_cruiser
+				technology = improved_heavy_cruiser
+				technology = advanced_heavy_cruiser
+			}
+		}
+	}
+
+	focus = {
+		id = ger_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ger_submarine_effort }
+		x = 8
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = early_destroyer
+				technology = basic_destroyer
+				technology = improved_destroyer
+				technology = advanced_destroyer
+			}
+		}
+	}
+
+	focus = {
+		id = ger_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = ger_cruiser_effort }
+		x = 10
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				technology = basic_battlecruiser
+				technology = basic_battleship
+				technology = improved_battleship
+				technology = advanced_battleship
+				technology = heavy_battleship
+				technology = heavy_battleship2
+				technology = early_carrier
+				technology = basic_carrier
+				technology = improved_carrier
+				technology = advanced_carrier
+			}
+		}
+	}
+	focus = {
+		id = ger_netherlands
+		prerequisite = { focus = ger_q }
+		x = 3
+		y = 1
+		cost = 10
+		completion_reward = {
+			HOL = {
+				country_event = { id = ger.5 }
+		}
+	}
+		}
+
+		
+		
+
 		

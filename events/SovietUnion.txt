@@ -393,7 +393,6 @@ country_event = {
 		SOV = {	transfer_state = 147}
 		SOV = {		transfer_state = 213}
 		SOV = {	transfer_state = 722}
-		}
 		146 = {
 			add_core_of = SOV
 		}
